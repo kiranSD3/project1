@@ -1,0 +1,76 @@
+<!-- main container fluid -->
+<div class="container-fluid">
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <div class="outer-content">
+
+            <!-- Content Head -->
+            <div class="content-head">
+
+                <div class="mini-img">
+
+                    <i class="fa-solid fa-gear icon fa-headcon"></i>
+
+                </div>
+
+                <h3 class="con-head">HR <span class="con-head-span"> PORTAL </span></h3>
+
+            </div>
+
+            <!-- form Content -->
+
+            <form action="" (ngSubmit)="login()">
+
+                <div class="form-group">
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-id-badge"></i></span>
+                        <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="fp-con">
+                        <a class="fp" href="">Forget Password?</a>
+                    </div>
+
+                    <div class="btn-groups">
+                        <!-- <button type="button" class="btn btn-primary">Close</button> -->
+                        <button type="submit"  class="btn btn-success gs">Get Started</button>
+                    </div>
+
+                    <div class="low-txt">
+
+                        <p>Or sign in with</p>
+                    </div>
+<div class="signin-content">
+    <i class="fa-brands fa-google fa f1"></i>
+    <i class="fa-brands fa-facebook fa f2"></i>
+    <i class="fa-brands fa-x-twitter fa f3"></i>
+</div>
+
+                </div>
+
+            </form>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Background Image Content -->
+    <div class="content-img">
+
+        <img src="/Images/log-bg.jpg" class="img-fluid bg-img" alt="Background Image ">
+
+    </div>
+
+</div>

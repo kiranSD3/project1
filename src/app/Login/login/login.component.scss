@@ -1,0 +1,100 @@
+.bg-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.outer-content {
+    position: absolute;
+    background-color: #e9ecef;
+    height: 500px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.61) 0px 5px 15px;
+    border-radius: 25px;
+}
+
+.content-head{
+    margin-top: 20px !important;
+}
+
+.con-head{
+    margin-top: 10px !important;
+    color: blue;
+    text-align: center;
+    font-size: 35px;
+}
+
+.con-head-span{
+    color: red;
+}
+
+.fa-headcon{
+    display: flex;
+    justify-content: center;
+}
+
+.icon{
+    font-size: 50px;
+    color: lightseagreen;
+    
+}
+
+.input-group > .form-control{
+    flex: none;
+}
+
+.form-control{
+    width: 300px;
+    border-radius: 10px;
+    // background-color: #cfd8d7;
+}
+
+.form-group{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.fp{
+    color: red;
+    text-decoration: none;
+    float: right;
+    margin-right: 30px;
+}
+
+.btn-groups{
+    margin-top: 60px;
+}
+
+.gs{
+   margin-left: 5px;
+    width: 330px;
+}
+
+.low-txt{
+    margin-top: 15px;
+    text-align: center;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.fa{
+    padding-right: 70px;
+}
+
+.signin-content{
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.f1{
+    color:red;
+}
+
+.f2{
+    color: blue;
+}
