@@ -1,0 +1,48 @@
+.main-header{
+    position: fixed;
+}
+
+.outline{
+    position: fixed;
+    width: 82%;
+    height: 6vh;
+    background-color: #f6fff8;
+    margin-left: 260px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    z-index: -10;
+}
+
+.icon-group {
+    float: right;
+    margin-right: 22px;
+    display: flex;
+    margin-top: 15px;
+    gap: 10px; 
+    align-items: center;
+    z-index: -5;
+}
+
+.ico {
+    display: flex;
+    padding-left: 25px;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+}
+
+.chk{
+    font-size: 18px;
+    color: #e95420;
+   
+    transition: 0.5s;
+   
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+

@@ -1,0 +1,120 @@
+<app-asidebar></app-asidebar>
+
+<app-navbar></app-navbar>
+
+<div class="breads">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Department</li>
+      </ol>
+</div>
+
+
+<div class="container-fluid">
+
+    <div class="outer-line">
+
+        
+        <div class="dept-content">
+
+            <h2 class="con-head fs-5">DEPARTMENTS LIST</h2>
+
+            <div class="head-search">
+                <div class="search-input">
+                    <input type="text" placeholder="Filter Department..." class="form-control input-head">
+                </div>
+
+                <div class="in-ico">
+                    <button class="btn btn-info"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+                </div>
+                <div class="btns">
+                    <button class="btn btn-primary newbtn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        ><i class="fa-solid fa-plus"></i> Add</button>
+                </div>
+
+            </div>
+            <p class="line"></p>
+        </div>
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col" class="colum ">#</th>
+                    <th scope="col" class="colum ">Department Name</th>
+                    <th scope="col" class="colum ">Department Short Name</th>
+                    <th scope="col" class="colum ">Status</th>
+                    <th scope="col" class="colum ">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dept of depts">
+                    <th class="values" scope="row">{{dept.row}}</th>
+                    <td class="values txt">{{dept.departmentName}}</td>
+                    <td class="values txt">{{dept.shortName}}</td>
+                    <td class="values txt txt1">
+                        {{ !dept.deptStatus === true ? ' Active' : 'INActive'}}
+                      </td>
+                      
+                    <td class="values">
+                        <button class="btn btn-warning fico"><i class="fa-solid fa-pen-to-square"></i> </button>
+                        <button class="btn btn-danger fico" (click)="deleteDepartment(dept)">
+                            <i class="fa-solid fa-ban"></i> 
+                          </button>
+                         </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- start -->
+
+        <div class="modal fade " id="exampleModal" data-bs-backdrop="false" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content depmodel">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Department</h1>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body">
+                        <form (ngSubmit)="addDepartment()">
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Department Name</label>
+                            <input type="text" name="departmentName" [(ngModel)]="newDepartment.departmentName" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Department Short Name</label>
+                            <input type="text" name="shortName" [(ngModel)]="newDepartment.shortName" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" name="deptStatus" [(ngModel)]="newDepartment.deptStatus" type="checkbox" id="flexSwitchCheckChecked">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
+                          </div>
+
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                          </div>
+                        </form>
+                      </div>
+                      
+                </div>
+            </div>
+        </div>
+
+        <!-- end -->
+
+    </div>
+
+</div>
+
+<!-- Add Option -->
+<!-- <div class="dropdown">
+    <button class="btn btn-danger fico"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Edit</a></li>
+      <li><a class="dropdown-item" href="#">Delete</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div> -->
